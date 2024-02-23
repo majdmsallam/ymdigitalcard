@@ -89,6 +89,7 @@ body{
     transform-origin: -100%;
     transform: scale(1);
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    color: white;
 }
   
 .tooltip-container span:last-child {
@@ -237,6 +238,15 @@ i{
     scale: 1;
 }
 
+a{
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+
 
 /**************************************************/
 @media (max-width:800px){
@@ -281,6 +291,10 @@ i{
     }
     .button{
         font-size: 18px;
+        margin-top: 40px;
+    }
+    #grid-container{
+        padding-bottom: 200px;
     }
 
 
