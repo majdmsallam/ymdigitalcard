@@ -383,8 +383,8 @@ footer p {
         justify-content: center;
         align-items: center;
     }
-    summary i{
-        font-size: 0px;
+    details summary::-webkit-details-marker {
+        display: none;
     }
 
 
