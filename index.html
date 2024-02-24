@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <section id="grid-container">
+            <div id="imgs-wrapper">
+                <div class="uppr-logo">
+                    <img class="logo" src="y.m perzol.png" alt="">
+                </div>
+                <div class="profile-pic">
+                    <img class="profile" src="elie.jpg" alt="">
+                </div>
+            </div>
+    
+            <div id="about-me">
+                <h1>אלי מסאלם</h1>
+                <h4>י.ם פרזול</h4>
+            </div>
+    
+            <div id="actions">
+                <div class="tooltip-container">
+                    <span class="tooltip"><i class="fa-brands fa-whatsapp"></i></span>
+                    <!-- <span class="text">וואטספ</span> -->
+                    <a class="text" href="https://api.whatsapp.com/send?phone=+972527042557"> וואטספ</a>
+                    <span>שלחו הודעה👋</span>
+                </div>
+        
+                <div class="tooltip-container">
+                    <span class="tooltip"><i class="fa-solid fa-phone"></i></span>
+                    <!-- <span class="text">חיוג לאלי</span> -->
+                    <a class="text" href="tel:+972505317192">חיוג לאלי</a>
+                    <span>שלום לכם 👋</span>
+                </div>
+        
+                <div class="tooltip-container">
+                   <span class="tooltip"><i class="fa-brands fa-instagram"></i></span>
+                   <!-- <span class="text">אנסטגרם </span> -->
+                   <a class="text" href="instagram://user?username=m4jd_m">אנסטגרם </a>
+                   <span>!תעקבו אחרינו 👋</span>
+                </div>
+        
+                <div class="tooltip-container">
+                  <span class="tooltip"><i class="fa-brands fa-facebook"></i></span>
+                  <span class="text">פייסבוק </span>
+                  <span>היי 👋</span>
+                </div>
+        
+                <div class="tooltip-container">
+                    <span class="tooltip"><i class="fa-brands fa-google"></i></span>
+                    <span class="text">השאירו המלצה </span>
+                    <span>תודה 👋</span>
+                </div>
+        
+                <div class="tooltip-container">
+                    <span class="tooltip"><i class="fa-brands fa-waze"></i></span>
+                    <!-- <span class="text">נווט לחנות</span> -->
+                    <a class="text" href="https://waze.com/ul?ll=32.70372,35.29966">נווט לחנות</a>
+                    <span>Hello! 👋</span>
+                </div>
+            </div>
+            <div class="save-contact">
+                <button id="save-btn" class="button">
+                    + שמור אותי באנשי הקשר 
+                </button>
+            </div>
+            
+        </section>
+        
+
+
+
+        
+    </div>
+    <section id="bussines-info">
+        <div class="details-wrapper">
+            <details class="details-buttom">
+                <summary><i class="fa-solid fa-arrow-down"></i>מידע כללי </summary>
+                <p>:שעות פעילות</p>
+                <ul>
+                    <li>שני: 7:30-4:30</li>
+                    <li>שלישי: 7:30-4:30</li>
+                    <li>רביעי: 7:30-3:00</li>
+                    <li>חמישי: 7:30-4:30</li>
+                    <li>שישי: 7:30-4:30</li>
+                    <li>שבת: 7:30-3:00</li>
+                    <li>ראשון: סגור</li>
+                </ul>
+            </details>
+            
+            <details class="details-buttom">
+                <summary><i class="fa-solid fa-arrow-down"></i>מוצרים שלנו</summary>
+                <ul>
+                    <li>כל סוגי הפזרזול לנגרים</li>
+                    <li>צבעים</li>
+                    <li>מוצרי השקיה</li>
+                    <li>מוצרי מקלחת ואמבטיה</li>
+                    <li>מנעולים וצילנדרים</li>
+                    <li>איטום ודבק</li>
+                </ul>
+            </details>
+            <details class="details-buttom">
+                <summary><i class="fa-solid fa-arrow-down"></i>מיקום</summary>
+                <p>נצרת, רח. פאולוס השישי</p>
+            </details>
+        </div>
+    </section>
+    <footer>
+        <p>© Copyright 2024 Majd Msallam - Digital Cards 2024</p>
+        <p>All rights reserved.</p>
+    </footer>
+    <script>
+        var saveBtn = document.getElementById("save-btn");
+        saveBtn.addEventListener("click", function () {
+        // Get the contact information from the website
+        var contact = {
+            name: "Majd msallam",
+            phone: "0527042557",
+            email: "msalm46@gmail.com"
+        };
+        // create a vcard file
+        var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
+        var blob = new Blob([vcard], { type: "text/vcard" });
+        var url = URL.createObjectURL(blob);
+        
+        const newLink = document.createElement('a');
+        newLink.download = contact.name + ".vcf";
+        newLink.textContent = contact.name;
+        newLink.href = url;
+        
+        newLink.click();
+        });
+    </script>
+    
+    
+</body>
+</html>
