@@ -309,6 +309,19 @@ summary i{
     transform: rotate(180deg); /* Rotate the arrow when details is open */
 }
 
+/*****************corasel**************************/
+.container-wrapper{
+    padding: 20px 0px;
+
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);  */
+    background-image: url(3d-background-with-white-cubes.jpg);
+}
+.container{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 20px 0px;
+}
+
 
 
 footer {
@@ -385,6 +398,9 @@ footer p {
     }
     details summary::-webkit-details-marker {
         display: none;
+    }
+    .container-wrapper{
+        padding: 20px 40px;
     }
 
 
