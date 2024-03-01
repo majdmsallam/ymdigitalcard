@@ -200,67 +200,50 @@ body {
     margin-bottom: 24px;
 }
 
-.addbtn {
+.button {
+    cursor: pointer;
     position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #fefefe;
-    text-transform: uppercase;
-    color: #fefefe;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-.addbtn::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - -2px);
-    background-color: #212121;
-    transition: 0.3s ease-out;
-    transform: scaleY(1);
-}
-
-.addbtn::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - 50px);
-    background-color: #212121;
-    transition: 0.3s ease-out;
-    transform: scaleY(1);
-}
-
-.addbtn:hover::before {
-    transform: translateY(-25px);
-    height: 0;
-}
-
-.addbtn:hover::after {
-    transform: scaleX(0);
-    transition-delay: 0.15s;
-}
-
-.addbtn:hover {
-    border: 2px solid #fefefe;
-}
-
-.addbtn span {
-    position: relative;
-    z-index: 3;
-}
-
-.addcontact {
-    margin-top: 15px;
-    text-decoration: none;
-    border: none;
+    padding: 10px 24px;
+    font-size: 30px;
+    color: rgb(193, 163, 98);
+    border: 2px solid rgb(193, 163, 98);
+    border-radius: 34px;
     background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(193, 163, 98);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+  
+  .button:hover::before {
+    scale: 10;
+}
+  
+  .button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+  
+  .button:active {
+    scale: 1;
 }
 a{
     color: white;
@@ -275,7 +258,7 @@ a:visited{
 
 
 
-@media (max-width:800px) {
+@media (max-width: 800px) and (min-width: 370px) {
     .profile {
         height: 100x;
         margin-top: -40px;
@@ -285,8 +268,8 @@ a:visited{
         height: 180px;
     }
     .custom-button {
-        width: 120px;
-        height: 60px;
+        width: 108px;
+        height: 55px;
         font-size: 10px;
         padding: 0px;
     }
@@ -305,5 +288,57 @@ a:visited{
     .custom-button i {
         padding-left: 5px;
         font-size: 10px;
+    }
+    .button{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:370px) {
+    #grid-container1 {
+        display: grid;
+        grid-template-areas:
+            "logo logo logo logo logo logo logo logo logo logo"
+            "logo logo logo logo logo logo logo logo logo logo"
+            ". . . . profile-pic profile-pic . . . ."
+            ". . . . aboutme aboutme . . . ."
+            ". . . . tooltip1 tooltip2 . . . ."
+            ". . . . tooltip4 tooltip5 . . . ."
+            ". . . . tooltip3 tooltip6 . . . ."
+            ". . save-btn save-btn save-btn save-btn save-btn save-btn . .";
+
+    }
+    .profile {
+        height: 100x;
+        margin-top: -40px;
+    }
+
+    .logo {
+        height: 180px;
+    }
+    .custom-button {
+        width: 108px;
+        height: 55px;
+        font-size: 10px;
+        padding: 0px;
+    }
+    #about-me h1 {
+        color: white;
+        font-size: 30px;
+        letter-spacing: 10px;
+        line-height: 0;
+    }
+    
+    #about-me h4 {
+        color: white;
+        padding: 0;
+        font-size: 15px;
+    }
+    .custom-button i {
+        padding-left: 5px;
+        font-size: 10px;
+    }
+    .button{
+        font-size: 20px;
     }
 }
