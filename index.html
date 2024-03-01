@@ -1,198 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <div class="main-container">
-        <section id="grid-container">
-            <div id="imgs-wrapper">
-                <div class="uppr-logo">
-                    <img class="logo" src="y.m perzol.png" alt="">
-                </div>
-                <div class="profile-pic">
-                    <img class="profile" src="elie.jpg" alt="">
-                </div>
-            </div>
-    
-            <div id="about-me">
-                <h1>אלי מסאלם</h1>
-                <h4>י.ם פרזול</h4>
-            </div>
-    
-            <div id="actions">
-                <div class="tooltip-container">
-                    <span class="tooltip"><i class="fa-brands fa-whatsapp"></i></span>
-                    <!-- <span class="text">וואטספ</span> -->
-                    <a class="text" href="https://api.whatsapp.com/send?phone=+972527042557"> וואטספ</a>
-                    <span>שלחו הודעה👋</span>
-                </div>
-        
-                <div class="tooltip-container">
-                    <span class="tooltip"><i class="fa-solid fa-phone"></i></span>
-                    <!-- <span class="text">חיוג לאלי</span> -->
-                    <a class="text" href="tel:+972505317192">חיוג לאלי</a>
-                    <span>שלום לכם 👋</span>
-                </div>
-        
-                <div class="tooltip-container">
-                   <span class="tooltip"><i class="fa-brands fa-instagram"></i></span>
-                   <!-- <span class="text">אנסטגרם </span> -->
-                   <a class="text" href="instagram://user?username=m4jd_m">אנסטגרם </a>
-                   <span>!תעקבו אחרינו 👋</span>
-                </div>
-        
-                <div class="tooltip-container">
-                  <span class="tooltip"><i class="fa-brands fa-facebook"></i></span>
-                  <span class="text">פייסבוק </span>
-                  <span>היי 👋</span>
-                </div>
-        
-                <div class="tooltip-container">
-                    <span class="tooltip"><i class="fa-brands fa-google"></i></span>
-                    <span class="text">השאירו המלצה </span>
-                    <span>תודה 👋</span>
-                </div>
-        
-                <div class="tooltip-container">
-                    <span class="tooltip"><i class="fa-brands fa-waze"></i></span>
-                    <!-- <span class="text">נווט לחנות</span> -->
-                    <a class="text" href="https://waze.com/ul?ll=32.70372,35.29966">נווט לחנות</a>
-                    <span>Hello! 👋</span>
-                </div>
-            </div>
-            <div class="save-contact">
-                <button id="save-btn" class="button">
-                    + שמור אותי באנשי הקשר 
-                </button>
-            </div>
-            
-        </section>
-        
+  <section id="main-section">
+    <div id="grid-container1">
+      <div class="logo1">
+        <img class="logo" src="Y.M.png" alt="">
+      </div>
+      <div class="profile-pic">
+        <img class="profile" src="elie.jpg" alt="">
+      </div>
+
+
+      <div id="about-me">
+        <h1>אלי מסאלם</h1>
+        <h4>י.ם פרזול</h4>
+      </div>
+      
+      <div class="tooltip-container1">
+        <button onclick="sendWhatsAppMessage()" class="btn1 action custom-button">
+          Whatsapp<i class="fa-brands fa-whatsapp"></i> <span></span>
+        </button>
+      </div>
+
+      <div class="tooltip-container2">
+        <button class="action custom-button">
+          <a href="tel:+972505317192">
+            Call Me <i class="fa-solid fa-phone"></i> <span></span>
+          </a>
+        </button>
+      </div>
+
+      <div class="tooltip-container3">
+        <button class="btn3 action custom-button">
+          <a href="instagram://user?username=m4jd_m">
+            instgram  <i class="fa-brands fa-instagram"></i><span></span>
+          </a>
+          
+        </button>
+      </div>
+
+      <div class="tooltip-container4">
+        <button class="btn4 action custom-button">
+          facebook <i class="fa-brands fa-facebook-f"></i><span></span>
+        </button>
+      </div>
+
+      <div class="tooltip-container5">
+        <button  class="btn5 action custom-button">
+          <a href="https://www.google.com/search?q=%D7%99.%D7%9E+%D7%A4%D7%A8%D7%96%D7%95%D7%9C&oq=%D7%99.%D7%9E+%D7%A4%D7%A8%D7%96&gs_lcrp=EgZjaHJvbWUqCggCEAAYExgWGB4yDAgAEAAYExjjAhiABDIPCAEQLhgTGK8BGMcBGIAEMgoIAhAAGBMYFhgeMgwIAxAAGA8YExgWGB4yBggEEEUYPDIGCAUQRRg9MgYIBhBFGD3SAQoxMzc0OWowajE1qAIAsAIA&sourceid=chrome&ie=UTF-8">
+            leave a review <i class="fa-brands fa-google"></i> <span></span>
+          </a>
+        </button>
+      </div>
+
+      <div class="tooltip-container6">
+        <button class="btn6 action custom-button">
+          <a href="https://waze.com/ul?ll=32.70372,35.29966">
+            waze <i class="fa-brands fa-waze"></i><span></span>
+          </a>
+        </button>
+      </div>
+
+      <div class="save-contact ">
+        <button class="addcontact" id="save-btn">
+          <a href="#" class="addbtn"><span class="spn2">+ שמור אותי באנשי הקשר</span></a>
+        </button>
+      </div>
 
 
 
-        
     </div>
-    <section id="bussines-info">
-        <div class="details-wrapper">
-            <details class="details-buttom">
-                <summary><i class="fa-solid fa-arrow-down"></i>מידע כללי </summary>
-                <p>:שעות פעילות</p>
-                <ul>
-                    <li>שני: 7:30-4:30</li>
-                    <li>שלישי: 7:30-4:30</li>
-                    <li>רביעי: 7:30-3:00</li>
-                    <li>חמישי: 7:30-4:30</li>
-                    <li>שישי: 7:30-4:30</li>
-                    <li>שבת: 7:30-3:00</li>
-                    <li>ראשון: סגור</li>
-                </ul>
-            </details>
-            
-            <details class="details-buttom">
-                <summary><i class="fa-solid fa-arrow-down"></i>מוצרים שלנו</summary>
-                <ul>
-                    <li>כל סוגי הפזרזול לנגרים</li>
-                    <li>צבעים</li>
-                    <li>מוצרי השקיה</li>
-                    <li>מוצרי מקלחת ואמבטיה</li>
-                    <li>מנעולים וצילנדרים</li>
-                    <li>איטום ודבק</li>
-                </ul>
-            </details>
-            <details class="details-buttom">
-                <summary><i class="fa-solid fa-arrow-down"></i>מיקום</summary>
-                <p>נצרת, רח. פאולוס השישי</p>
-            </details>
-        </div>
-    </section>
-    <div class="container-wrapper">
-        <div class="container">
-            <!-- <h2>Carousel Example</h2> -->
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-        
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-        
-                <div class="item active">
-                <img src="Bdesign.png" alt="Los Angeles" style="width:100%">
-                <div class="carousel-caption">
-                    <h3>אבזרי אמבטיה</h3>
-                    <!-- <p></p> -->
-                </div>
-                </div>
-        
-                <div class="item">
-                <img src="shower.jpg" alt="Chicago" style="width:100%;">
-                <div class="carousel-caption">
-                    <h3>עמוד דוש</h3>
-                    <!-- <p>Thank you, Chicago!</p> -->
-                </div>
-                </div>
-            
-                <div class="item">
-                <img src="handles.jpg" alt="New York" style="width:100%;">
-                <div class="carousel-caption">
-                    <h3>ידיות לארונות-מטבח-חדרי שינה </h3>
-                    <!-- <p>We love the Big Apple!</p> -->
-                </div>
-                </div>
-            
-            </div>
-        
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <p>© Copyright 2024 Majd Msallam - Digital Cards 2024</p>
-        <p>All rights reserved.</p>
-    </footer>
-    <script>
-        var saveBtn = document.getElementById("save-btn");
-        saveBtn.addEventListener("click", function () {
-        // Get the contact information from the website
-        var contact = {
-            name: "Majd msallam",
-            phone: "0527042557",
-            email: "msalm46@gmail.com"
-        };
-        // create a vcard file
-        var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
-        var blob = new Blob([vcard], { type: "text/vcard" });
-        var url = URL.createObjectURL(blob);
-        
-        const newLink = document.createElement('a');
-        newLink.download = contact.name + ".vcf";
-        newLink.textContent = contact.name;
-        newLink.href = url;
-        
-        newLink.click();
-        });
-    </script>
+
+  </section>
+  <script>
+    var saveBtn = document.getElementById("save-btn");
+    saveBtn.addEventListener("click", function () {
+    // Get the contact information from the website
+    var contact = {
+        name: "Majd msallam",
+        phone: "0527042557",
+        email: "msalm46@gmail.com"
+    };
+    // create a vcard file
+    var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
+    var blob = new Blob([vcard], { type: "text/vcard" });
+    var url = URL.createObjectURL(blob);
     
+    const newLink = document.createElement('a');
+    newLink.download = contact.name + ".vcf";
+    newLink.textContent = contact.name;
+    newLink.href = url;
     
+    newLink.click();
+    });
+    function sendWhatsAppMessage() {
+            window.open('https://api.whatsapp.com/send?phone=+972527042557','_blank');
+        }
+</script>
 </body>
+
 </html>
