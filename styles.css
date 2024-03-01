@@ -87,7 +87,7 @@ body {
     font-size: 17px;
     text-decoration: none;
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -285,9 +285,10 @@ a:visited{
         height: 180px;
     }
     .custom-button {
-        width: 100px;
-        height: 40px;
+        width: 120px;
+        height: 60px;
         font-size: 10px;
+        padding: 0px;
     }
     #about-me h1 {
         color: white;
