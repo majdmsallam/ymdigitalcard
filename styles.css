@@ -505,7 +505,7 @@ a:visited {
 }
 
 
-@media (max-width:370px) {
+@media (max-width:382px) {
     #grid-container1 {
         display: grid;
         grid-template-areas:
