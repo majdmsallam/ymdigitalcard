@@ -19,21 +19,21 @@ saveBtn.addEventListener("click", function () {
     newLink.click();
 });
 function sendWhatsAppMessage() {
-    window.location.href('https://api.whatsapp.com/send?phone=+972527042557', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=+972527042557', '_blank');
 }
 function makeCall(){
-    window.location.href('tel:+972505317192', '_blank');
+    window.open('tel:+972505317192', '_blank');
 }
 function openInstgram() {
-    window.location.href('instagram://user?username=m4jd_m', '_blank');
+    window.open('instagram://user?username=m4jd_m', '_blank');
 }
 function openFacebook() {
 }
 function openGoogle() {
-    window.location.href('https://www.google.com/search?q=%D7%99.%D7%9E+%D7%A4%D7%A8%D7%96%D7%95%D7%9C&oq=%D7%99.%D7%9E+%D7%A4%D7%A8%D7%96&gs_lcrp=EgZjaHJvbWUqCggCEAAYExgWGB4yDAgAEAAYExjjAhiABDIPCAEQLhgTGK8BGMcBGIAEMgoIAhAAGBMYFhgeMgwIAxAAGA8YExgWGB4yBggEEEUYPDIGCAUQRRg9MgYIBhBFGD3SAQoxMzc0OWowajE1qAIAsAIA&sourceid=chrome&ie=UTF-8', '_blank');
+    window.open('https://www.google.com/search?q=%D7%99.%D7%9E+%D7%A4%D7%A8%D7%96%D7%95%D7%9C&oq=%D7%99.%D7%9E+%D7%A4%D7%A8%D7%96&gs_lcrp=EgZjaHJvbWUqCggCEAAYExgWGB4yDAgAEAAYExjjAhiABDIPCAEQLhgTGK8BGMcBGIAEMgoIAhAAGBMYFhgeMgwIAxAAGA8YExgWGB4yBggEEEUYPDIGCAUQRRg9MgYIBhBFGD3SAQoxMzc0OWowajE1qAIAsAIA&sourceid=chrome&ie=UTF-8', '_blank');
 }
 function openWaze() {
-    window.location.href('https://waze.com/ul?ll=32.70372,35.29966', '_blank');
+    window.open('https://waze.com/ul?ll=32.70372,35.29966', '_blank');
 }
 
 /////////////////////////////// courasel
