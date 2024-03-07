@@ -217,8 +217,8 @@ body {
     align-items: center;
     margin: 30px 0;
 }
-  
-  .button::before {
+
+.button::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -231,27 +231,28 @@ body {
     background-color: rgb(193, 163, 98);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
-  
-  .button:hover::before {
+
+.button:hover::before {
     scale: 10;
 }
-  
-  .button:hover {
+
+.button:hover {
     color: #212121;
     scale: 1.1;
-    box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
-}
-  
-  .button:active {
-    scale: 1;
-}
-a{
-    color: white;
-    text-decoration: none;
-    
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
 }
 
-a:visited{
+.button:active {
+    scale: 1;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+}
+
+a:visited {
     color: white;
 }
 
@@ -267,32 +268,242 @@ a:visited{
     .logo {
         height: 180px;
     }
+
     .custom-button {
         width: 108px;
         height: 55px;
         font-size: 10px;
         padding: 0px;
     }
+
     #about-me h1 {
         color: white;
         font-size: 30px;
         letter-spacing: 20px;
         line-height: 0;
     }
-    
+
     #about-me h4 {
         color: white;
         padding: 0;
         font-size: 15px;
     }
+
     .custom-button i {
         padding-left: 5px;
         font-size: 10px;
     }
-    .button{
+
+    .button {
         font-size: 20px;
     }
 }
+
+/*************************corasel***********************************/
+#courasel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f3f3f3;
+}
+/********************proudcts header********************/
+.outer-headings{
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 35px;
+    letter-spacing: 15px;
+}
+
+.products-h1{
+    font-size: 10px;
+}
+
+.inner-headings{
+    height: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-align: center;
+    letter-spacing: 8px;
+
+}
+
+.inner-headings span{
+    position: relative;
+    color: rgb(193, 163, 98);
+    animation: ani 10s ease infinite;
+    text-align: right;
+    font-size: 40px;
+}
+
+@keyframes ani{
+    0%, 100%{
+        top: 0;
+    }
+    20%{
+        top: -50px;
+    }
+    25%{
+        top: -50px;
+    }
+    40%{
+        top: -120px;
+    }
+    45%{
+        top: -120px;
+    }
+    60%{
+        top: -170px;
+    }
+    65%{
+        top: -170px;
+    }
+    80%{
+        top: -220px;
+    }
+    85%{
+        top: -220px;
+    }
+}
+.container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.slider-container .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-container .slide-button:hover {
+    background: #404040;
+}
+
+.slider-container .slide-button#previous-slide {
+    left: -25px;
+    display: none;
+}
+
+.slider-container .slide-button#next-slide {
+    right: -25px;
+}
+
+.slider-container .image-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-container .image-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-container .image-grid .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+    border-bottom-left-radius: 25%;
+    border-top-right-radius: 25%;
+}
+
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+    .slider-container .slide-button {
+        display: none !important;
+    }
+
+    .slider-container .image-grid {
+        gap: 10px;
+        margin-bottom: 15px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .slider-container .image-grid .image-item {
+        width: 280px;
+        height: 380px;
+    }
+
+    .slider-scrollbar .scrollbar-thumb {
+        width: 20%;
+    }
+}
+
 
 @media (max-width:370px) {
     #grid-container1 {
@@ -308,6 +519,7 @@ a:visited{
             ". . save-btn save-btn save-btn save-btn save-btn save-btn . .";
 
     }
+
     .profile {
         height: 100x;
         margin-top: -40px;
@@ -316,29 +528,33 @@ a:visited{
     .logo {
         height: 180px;
     }
+
     .custom-button {
         width: 108px;
         height: 55px;
         font-size: 10px;
         padding: 0px;
     }
+
     #about-me h1 {
         color: white;
         font-size: 30px;
         letter-spacing: 10px;
         line-height: 0;
     }
-    
+
     #about-me h4 {
         color: white;
         padding: 0;
         font-size: 15px;
     }
+
     .custom-button i {
         padding-left: 5px;
         font-size: 10px;
     }
-    .button{
+
+    .button {
         font-size: 20px;
     }
 }

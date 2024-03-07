@@ -33,38 +33,33 @@
       </div>
 
       <div class="tooltip-container2">
-        <button class="action custom-button">
-          <a href="tel:+972505317192">
+        <button onclick="makeCall()" class="action custom-button">
             Call Me <i class="fa-solid fa-phone"></i> <span></span>
-          </a>
         </button>
       </div>
 
       <div class="tooltip-container3">
-        <button class="btn3 action custom-button">
-          <a href="instagram://user?username=m4jd_m">
+        <button onclick="openInstgram()" class="btn3 action custom-button">
             Instgram  <i class="fa-brands fa-instagram"></i><span></span>
-          </a>
-          
         </button>
       </div>
 
       <div class="tooltip-container4">
-        <button class="btn4 action custom-button">
+        <button onclick="openFacebook()" class="btn4 action custom-button">
           Facebook <i class="fa-brands fa-facebook-f"></i><span></span>
         </button>
       </div>
 
       <div class="tooltip-container5">
-        <button  class="btn5 action custom-button">
-          <a href="https://www.google.com/search?q=%D7%99.%D7%9E+%D7%A4%D7%A8%D7%96%D7%95%D7%9C&oq=%D7%99.%D7%9E+%D7%A4%D7%A8%D7%96&gs_lcrp=EgZjaHJvbWUqCggCEAAYExgWGB4yDAgAEAAYExjjAhiABDIPCAEQLhgTGK8BGMcBGIAEMgoIAhAAGBMYFhgeMgwIAxAAGA8YExgWGB4yBggEEEUYPDIGCAUQRRg9MgYIBhBFGD3SAQoxMzc0OWowajE1qAIAsAIA&sourceid=chrome&ie=UTF-8">
+        <button onclick="openGoogle()" class="btn5 action custom-button">
+          <a href="">
             Leave a review <i class="fa-brands fa-google"></i> <span></span>
           </a>
         </button>
       </div>
 
       <div class="tooltip-container6">
-        <button class="btn6 action custom-button">
+        <button onclick="openWaze()" class="btn6 action custom-button">
           <a href="https://waze.com/ul?ll=32.70372,35.29966">
             Waze <i class="fa-brands fa-waze"></i><span></span>
           </a>
@@ -76,37 +71,53 @@
             + שמור אותי באנשי הקשר 
         </button>
       </div>
-
-
-
     </div>
 
   </section>
-  <script>
-    var saveBtn = document.getElementById("save-btn");
-    saveBtn.addEventListener("click", function () {
-    // Get the contact information from the website
-    var contact = {
-        name: "Majd msallam",
-        phone: "0527042557",
-        email: "msalm46@gmail.com"
-    };
-    // create a vcard file
-    var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
-    var blob = new Blob([vcard], { type: "text/vcard" });
-    var url = URL.createObjectURL(blob);
-    
-    const newLink = document.createElement('a');
-    newLink.download = contact.name + ".vcf";
-    newLink.textContent = contact.name;
-    newLink.href = url;
-    
-    newLink.click();
-    });
-    function sendWhatsAppMessage() {
-            window.open('https://api.whatsapp.com/send?phone=+972527042557','_blank');
-        }
-</script>
+  <section id="courasel">
+    <div class="outer-headings">
+      <h1 class="proudcts-h1">
+          מוצרים שלנו
+          <div class="inner-headings">
+              <span>
+                  פרזול לנגרים <br>
+                  ידיות ארונות ומגירות <br>
+                  כל סוגי המגירות<br>
+                  מוצרי השקיה וגינה <br>
+                  ברזים וחלקי אנסטלציה <br>
+              </span>
+          </div>
+      </h1>
+  </div>
+    <div class="container">
+      <div class="slider-container">
+        <button id="previous-slide" class="slide-button material-symbols-rounded">
+          <
+        </button>
+        <ul class="image-grid">
+          <img class="image-item" src="images/img-1.jpg" alt="img-1" />
+          <img class="image-item" src="images/img-2.jpg" alt="img-2" />
+          <img class="image-item" src="images/img-3.jpg" alt="img-3" />
+          <img class="image-item" src="images/img-4.jpg" alt="img-4" />
+          <img class="image-item" src="images/img-5.jpg" alt="img-5" />
+          <img class="image-item" src="images/img-6.jpeg" alt="img-6" />
+          <!-- <img class="image-item" src="images/img-7.jpg" alt="img-7" />
+          <img class="image-item" src="images/img-8.jpg" alt="img-8" />
+          <img class="image-item" src="images/img-9.jpg" alt="img-9" />
+          <img class="image-item" src="images/img-10.jpg" alt="img-10" /> -->
+        </ul>
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          >
+        </button>
+      </div>
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
