@@ -607,7 +607,7 @@ a:visited {
 }
 @media (max-width:769px) {
     .aboutus-img{
-        height: 350px;
+        height: 280px;
         border-bottom-left-radius: 20%;
         border-top-right-radius: 20%;
         box-shadow: 0 0 6px rgba(0, 0, 0, 1);
@@ -618,10 +618,10 @@ a:visited {
         width: 70%;
         text-align: center;
         margin: auto;
-        font-size: 12px;
+        font-size: 13px;
     }
     .aboutus-text h1{
-        font-size: 20px;
+        font-size: 22px;
         letter-spacing:4px ;
     }
 
