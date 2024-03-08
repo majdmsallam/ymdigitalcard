@@ -596,4 +596,33 @@ a:visited {
     .button {
         font-size: 20px;
     }
+    .aboutus-img{
+        height: 250px;
+        border-bottom-left-radius: 20%;
+        border-top-right-radius: 20%;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+        margin-left: 5%;
+    
+    }
+}
+@media (max-width:769px) {
+    .aboutus-img{
+        height: 350px;
+        border-bottom-left-radius: 20%;
+        border-top-right-radius: 20%;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+        margin-left: 5%;
+    
+    }
+    .aboutus-text p{
+        width: 70%;
+        text-align: center;
+        margin: auto;
+        font-size: 12px;
+    }
+    .aboutus-text h1{
+        font-size: 20px;
+        letter-spacing:4px ;
+    }
+
 }
